@@ -144,24 +144,29 @@
         </ul>
     </div>
 
-    <!-- Advert Section -->
+    <!-- Advert Section (Marketing Gimmick) -->
     <div class="section" id="advert" style="text-align:center;">
-        <div style="display: inline-block; max-width: 400px; padding: 20px; border: 2px solid #0077b6; border-radius: 12px; background: #e8f6ff;">
+        <div style="display: inline-block; max-width: 420px; padding: 25px; border: 2px solid #0077b6; border-radius: 14px; background: #e8f6ff; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             <img src="logo.png" alt="TiyambePo Foundation Logo" style="height: 60px; margin-bottom: 15px;">
-            <h2 style="color:#0077b6; font-size: 22px; margin: 10px 0;">Grow Your Impact Today!</h2>
-            <p style="font-size: 16px; margin-bottom: 20px;">We help NGOs, students, and businesses win grants, create proposals, and access real opportunities.</p>
+            <h2 style="color:#0077b6; font-size: 22px; margin: 10px 0;">Turn Your Ideas Into Real Opportunities!</h2>
+            <p style="font-size: 16px; margin-bottom: 15px;">
+                TiyambePo Foundation helps NGOs, students, and businesses win grants and create proposals that fund real impact. 
+                Stop guessing — get expert support today!
+            </p>
+            <p style="font-weight:600; color:#005b89; margin-bottom: 20px;">
+                Click “Share This” to spread opportunities and help others succeed!
+            </p>
             <!-- Share Button -->
-            <a href="#" id="shareBtn" style="display:inline-block; padding: 12px 20px; background:#0077b6; color:#fff; text-decoration:none; border-radius:8px; font-weight:600; cursor:pointer;">🔗 Share This</a>
+            <a href="#" id="shareBtn" style="display:inline-block; padding: 14px 22px; background:#0077b6; color:#fff; text-decoration:none; border-radius:8px; font-weight:600; cursor:pointer;">🔗 Share This</a>
         </div>
     </div>
 
     <script>
         const shareBtn = document.getElementById('shareBtn');
-
         shareBtn.addEventListener('click', async () => {
             const shareData = {
                 title: 'TiyambePo Foundation',
-                text: 'Grow your impact! Check out TiyambePo Foundation for professional grant & proposal support.',
+                text: 'Turn your ideas into real opportunities! Get professional grant & proposal support with TiyambePo Foundation.',
                 url: window.location.href
             }
 
@@ -199,55 +204,56 @@
     <footer>
         © 2025 TiyambePo Foundation — Professional • Trustworthy • Impact-Driven
     </footer>
-<!-- Floating Share Button -->
-<div id="floatingShare" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #0077b6;
-    color: #fff;
-    border-radius: 50px;
-    padding: 12px 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.2s;
-">
-    <img src="logo.png" alt="TiyambePo Logo" style="height: 30px; border-radius: 50%;">
-    <span style="font-weight: 600;">Share</span>
-</div>
 
-<script>
-    const floatingShare = document.getElementById('floatingShare');
-    floatingShare.addEventListener('click', async () => {
-        const shareData = {
-            title: 'TiyambePo Foundation',
-            text: 'Grow your impact! Check out TiyambePo Foundation for professional grant & proposal support.',
-            url: window.location.href
-        }
+    <!-- Floating Share Button -->
+    <div id="floatingShare" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #0077b6;
+        color: #fff;
+        border-radius: 50px;
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        cursor: pointer;
+        z-index: 1000;
+        transition: transform 0.2s;
+    ">
+        <img src="logo.png" alt="TiyambePo Logo" style="height: 30px; border-radius: 50%;">
+        <span style="font-weight: 600;">Share</span>
+    </div>
 
-        try {
-            if (navigator.share) {
-                await navigator.share(shareData);
-            } else {
-                prompt('Copy this link to share:', window.location.href);
+    <script>
+        const floatingShare = document.getElementById('floatingShare');
+        floatingShare.addEventListener('click', async () => {
+            const shareData = {
+                title: 'TiyambePo Foundation',
+                text: 'Turn your ideas into real opportunities! Get professional grant & proposal support with TiyambePo Foundation.',
+                url: window.location.href
             }
-        } catch(err) {
-            console.error('Error sharing:', err);
-        }
-    });
 
-    // Optional hover animation
-    floatingShare.addEventListener('mouseover', () => {
-        floatingShare.style.transform = 'scale(1.1)';
-    });
-    floatingShare.addEventListener('mouseout', () => {
-        floatingShare.style.transform = 'scale(1)';
-    });
-</script>
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    prompt('Copy this link to share:', window.location.href);
+                }
+            } catch(err) {
+                console.error('Error sharing:', err);
+            }
+        });
+
+        // Optional hover animation
+        floatingShare.addEventListener('mouseover', () => {
+            floatingShare.style.transform = 'scale(1.1)';
+        });
+        floatingShare.addEventListener('mouseout', () => {
+            floatingShare.style.transform = 'scale(1)';
+        });
+    </script>
 
 </body>
 </html>
