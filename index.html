@@ -6,26 +6,72 @@
     <title>TiyambePo Foundation</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fafafa; color: #222; }
+
+        /* Header with logo */
         header {
-            text-align: center;
-            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
             background: linear-gradient(135deg, #0077b6, #00a8e8);
             color: #fff;
+            text-align: center;
         }
-        header h1 { margin: 0; font-size: 36px; font-weight: 700; }
-        header p { margin-top: 10px; font-size: 18px; opacity: 0.95; }
+
+        header .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        header .logo-title img {
+            height: 80px;
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 36px; 
+            font-weight: 700; 
+        }
+
+        header p { 
+            margin-top: 10px; 
+            font-size: 18px; 
+            opacity: 0.95; 
+        }
+
+        /* Navigation (optional) */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
 
         .section {
             padding: 40px 25px;
             max-width: 850px;
-            margin: auto;
+            margin: 25px auto 0 auto;
             background: #ffffff;
             border-radius: 10px;
-            margin-top: 25px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.07);
         }
+
         h2 { color: #0077b6; font-size: 24px; margin-bottom: 15px; }
         ul { padding-left: 20px; line-height: 1.8; }
+
         .highlight {
             background: #e8f6ff;
             padding: 15px;
@@ -63,16 +109,30 @@
             header h1 { font-size: 28px; }
             header p { font-size: 15px; }
             .btn { width: 85%; }
+            header .logo-title { flex-direction: column; }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>TiyambePo Foundation</h1>
+        <div class="logo-title">
+            <a href="index.html">
+                <img src="logo.png" alt="Tiyambepo Foundation Logo">
+            </a>
+            <h1>TiyambePo Foundation</h1>
+        </div>
         <p>Your Partner for Winning Grants, Strong Proposals & Academic Success</p>
+
+        <!-- Optional Navigation -->
+        <nav>
+            <a href="#what-we-offer">What We Offer</a>
+            <a href="#who-we-support">Who We Support</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <div class="section">
+    <div class="section" id="what-we-offer">
         <div class="highlight">
             We transform ideas into fundable, professional proposals — helping NGOs, communities, small businesses, and students access real opportunities.
         </div>
@@ -89,7 +149,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="who-we-support">
         <h2>Who We Support</h2>
         <ul>
             <li>NGOs, CBOs & social impact organizations</li>
@@ -100,7 +160,7 @@
         </ul>
     </div>
 
-    <div class="section contact">
+    <div class="section contact" id="contact">
         <h2>Let’s Work Together</h2>
         <p>Get professional support that is reliable, affordable, and tailored to your goals.</p>
 
@@ -112,5 +172,6 @@
     <footer>
         © 2025 TiyambePo Foundation — Professional • Trustworthy • Impact-Driven
     </footer>
+
 </body>
 </html>
