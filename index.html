@@ -27,27 +27,11 @@
             justify-content: center;
         }
 
-        header .logo-title img {
-            height: 80px;
-        }
+        header .logo-title img { height: 80px; }
+        header h1 { margin: 0; font-size: 36px; font-weight: 700; }
+        header p { margin-top: 10px; font-size: 18px; opacity: 0.95; }
 
-        header h1 { 
-            margin: 0; 
-            font-size: 36px; 
-            font-weight: 700; 
-        }
-
-        header p { 
-            margin-top: 10px; 
-            font-size: 18px; 
-            opacity: 0.95; 
-        }
-
-        /* Navigation (optional) */
-        nav {
-            margin-top: 20px;
-        }
-
+        nav { margin-top: 20px; }
         nav a {
             margin: 0 15px;
             text-decoration: none;
@@ -55,10 +39,7 @@
             font-weight: 600;
             transition: 0.2s;
         }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
+        nav a:hover { text-decoration: underline; }
 
         .section {
             padding: 40px 25px;
@@ -92,6 +73,7 @@
             border-radius: 8px;
             font-weight: 600;
             transition: 0.2s;
+            cursor: pointer;
         }
         .btn:hover { background: #005b89; }
 
@@ -105,6 +87,8 @@
             letter-spacing: 0.5px;
         }
 
+        iframe { width: 100%; border: none; border-radius: 8px; }
+
         @media (max-width: 600px) {
             header h1 { font-size: 28px; }
             header p { font-size: 15px; }
@@ -115,28 +99,27 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <div class="logo-title">
-            <a href="index.html">
-                <img src="logo.png" alt="Tiyambepo Foundation Logo">
-            </a>
+            <a href="index.html"><img src="logo.png" alt="Tiyambepo Foundation Logo"></a>
             <h1>TiyambePo Foundation</h1>
         </div>
         <p>Your Partner for Winning Grants, Strong Proposals & Academic Success</p>
 
-        <!-- Optional Navigation -->
         <nav>
             <a href="#what-we-offer">What We Offer</a>
             <a href="#who-we-support">Who We Support</a>
             <a href="#contact">Contact</a>
+            <a href="#feedback">Feedback</a>
         </nav>
     </header>
 
+    <!-- What We Offer -->
     <div class="section" id="what-we-offer">
         <div class="highlight">
             We transform ideas into fundable, professional proposals — helping NGOs, communities, small businesses, and students access real opportunities.
         </div>
-
         <h2>What We Offer</h2>
         <p>Our services are designed to make your work stand out, attract funding, and meet donor standards easily and confidently.</p>
         <ul>
@@ -149,6 +132,7 @@
         </ul>
     </div>
 
+    <!-- Who We Support -->
     <div class="section" id="who-we-support">
         <h2>Who We Support</h2>
         <ul>
@@ -160,15 +144,25 @@
         </ul>
     </div>
 
+    <!-- Contact Section -->
     <div class="section contact" id="contact">
         <h2>Let’s Work Together</h2>
         <p>Get professional support that is reliable, affordable, and tailored to your goals.</p>
-
         <a class="btn" href="mailto:tiyambepofoundation@gmail.com">📧 Email Us</a>
         <a class="btn" href="tel:+265994252775">📞 Call: 0994 252 775</a>
         <a class="btn" href="https://wa.me/265881184173">💬 WhatsApp: 0881 184 173</a>
     </div>
 
+    <!-- Feedback Section with Google Form -->
+    <div class="section" id="feedback">
+        <h2>We Value Your Feedback</h2>
+        <p>Have we been helpful? Share your thoughts to help us improve and grow.</p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegnXcxxT5g5BnZFhkX5plM8nQC7JzKKi4NkP5UawVIULi-jQ/viewform?embedded=true" 
+                height="1255">Loading…</iframe>
+    </div>
+
+    <!-- Footer -->
     <footer>
         © 2025 TiyambePo Foundation — Professional • Trustworthy • Impact-Driven
     </footer>
